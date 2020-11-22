@@ -100,7 +100,6 @@ return tab;
 }
 
 
-
 function AfficheTab(poste) // 4 
 {
   var tab =[];
@@ -164,16 +163,40 @@ function triabulle(tableau){
             }
         }
 }
+var info = document.getElementById("label1");
+var bouton = document.getElementById("button1");
+var text = document.getElementById("textBox1");
+//parseInt(text.value);
+
+
+function randy(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}
 
 
 
+function verif() {
+    
+    if (text.value == '')
+    {
+        text.value = '';
+    }
+    else if (text.value < r)
+    {
+        text.value = 'Plus haut';
+    }
+    else if (text.value > r)
+    {
+        text.value = 'Plus bas';
+    }
+    else if (text.value = r)
+    {
+        alert('Bien joué !');
+    }
+}
+var r = randy(5000);
+console.log(r)
 
-
-
-
-
-
-
-
+bouton.addEventListener('click', verif());
 
 
